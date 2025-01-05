@@ -112,28 +112,7 @@ const StartHelper = () => {
         return newSettings
     }
 
-    const fetchSummonElements = (summonList: string[]) => {
-        var newSummonElementsList: string[] = []
-        summonList.forEach((summon) => {
-            if (summonData.Fire.summons.indexOf(summon) !== -1) {
-                newSummonElementsList = newSummonElementsList.concat("Fire")
-            } else if (summonData.Water.summons.indexOf(summon) !== -1) {
-                newSummonElementsList = newSummonElementsList.concat("Water")
-            } else if (summonData.Earth.summons.indexOf(summon) !== -1) {
-                newSummonElementsList = newSummonElementsList.concat("Earth")
-            } else if (summonData.Wind.summons.indexOf(summon) !== -1) {
-                newSummonElementsList = newSummonElementsList.concat("Wind")
-            } else if (summonData.Light.summons.indexOf(summon) !== -1) {
-                newSummonElementsList = newSummonElementsList.concat("Light")
-            } else if (summonData.Dark.summons.indexOf(summon) !== -1) {
-                newSummonElementsList = newSummonElementsList.concat("Dark")
-            } else if (summonData.Misc.summons.indexOf(summon) !== -1) {
-                newSummonElementsList = newSummonElementsList.concat("Misc")
-            }
-        })
 
-        return newSummonElementsList
-    }
 
     // Save current settings to JSON file.
     useEffect(() => {
@@ -143,8 +122,8 @@ const StartHelper = () => {
                 const localSettings: Settings = bsc.settings
 
                 // Find the elements of the support Summons for the Farming Mode first and then for Nightmare if available.
-                localSettings.game.summonElements = fetchSummonElements(localSettings.game.summons)
-                localSettings.nightmare.nightmareSummonElements = fetchSummonElements(localSettings.nightmare.nightmareSummons)
+                // localSettings.game.summonElements = fetchSummonElements(localSettings.game.summons)
+                // localSettings.nightmare.nightmareSummonElements = fetchSummonElements(localSettings.nightmare.nightmareSummons)
 
                 // Stringify the contents and prepare for writing to the specified file.
                 const jsonString = JSON.stringify(localSettings, null, 4)

@@ -86,7 +86,7 @@ class GenericV2:
     @staticmethod
     def single_battle(support_summon: str):
         from bot.game import Game
-        """ Standart method to do a battle
+        """ Standard method to do a battle
         """
         if not ImageUtils.confirm_location("select_a_summon", tries = 30):
             raise RuntimeError("Failed to arrive at the Summon Selection screen.")
