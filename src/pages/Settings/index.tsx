@@ -5,7 +5,7 @@ import CustomSwitch from "../../components/CustomSwitch"
 import CustomNumberInput from "../../components/CustomNumberInput"
 import { BotStateContext } from "../../context/BotStateContext"
 import data from "../../data/data.json"
-import CustomTransferList from "../../components/CustomTransferList"
+// import CustomTransferList from "../../components/CustomTransferList"
 import { Icon } from "@iconify/react"
 import { loadCombatScript, loadCombatScriptAlternative } from "../../helpers/CombatScriptHelper"
 import ArcarumHelper from "../../helpers/FarmingModeHelpers/ArcarumHelper"
@@ -417,13 +417,13 @@ const Settings = () => {
         )
     }
 
-    const renderSummonSetting = () => {
-        if (bsc.settings.game.farmingMode !== "Coop" && bsc.settings.game.farmingMode !== "Arcarum" && bsc.settings.game.farmingMode !== "Arcarum Sandbox") {
-            return <CustomTransferList />
-        } else {
-            return null
-        }
-    }
+    // const renderSummonSetting = () => {
+    //     if (bsc.settings.game.farmingMode !== "Coop" && bsc.settings.game.farmingMode !== "Arcarum" && bsc.settings.game.farmingMode !== "Arcarum Sandbox") {
+    //         return <CustomTransferList />
+    //     } else {
+    //         return null
+    //     }
+    // }
 
     const renderGroupPartySettings = () => {
         if (bsc.settings.game.farmingMode !== "Generic" && bsc.settings.game.farmingMode !== "GenericV2") {
@@ -465,7 +465,7 @@ const Settings = () => {
                 {renderItemSetting()}
                 {renderMissionSetting()}
                 {renderItemAmountSetting()}
-                {renderSummonSetting()}
+                {/* {renderSummonSetting()} */}
                 {renderGroupPartySettings()}
 
                 <Divider my="xs" labelPosition="center" label={<Icon icon="material-symbols:settings" height={25} width={25} style={{ color: "purple" }} />} />

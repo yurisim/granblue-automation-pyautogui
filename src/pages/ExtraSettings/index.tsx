@@ -3,7 +3,7 @@ import { useContext, useState } from "react"
 import CustomSwitch from "../../components/CustomSwitch"
 import CustomNumberInput from "../../components/CustomNumberInput"
 import { BotStateContext } from "../../context/BotStateContext"
-import CustomTransferList from "../../components/CustomTransferList"
+// import CustomTransferList from "../../components/CustomTransferList"
 import { Icon } from "@iconify/react"
 import { loadCombatScript, loadCombatScriptAlternative } from "../../helpers/CombatScriptHelper"
 import { Text } from "@mantine/core"
@@ -470,7 +470,7 @@ const ExtraSettings = () => {
                                     />
                                 )}
 
-                                <CustomTransferList isNightmare={true} />
+                                {/* <CustomTransferList isNightmare={true} /> */}
 
                                 <Grid justify="center" align="center">
                                     <Grid.Col id="gridItemNightmareGroup" span={4}>
